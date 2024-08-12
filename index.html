@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <title>Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="../../image/favicon_10.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+      body {
+        box-sizing: border-box;
+        /*min-height: 100vh;
+        position: relative;
+        padding-bottom: 150px;*/
+        font-family:Arial, Helvetica, sans-serif;
+      }
+      /* Top Bar section */
+      .topHeader {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        gap: 15px;
+        width: 80%;
+        margin: auto;
+        padding: 2px 25px;
+        color: white;
+        background-color: rgb(157, 84, 190);
+        border-radius: 3px;
+       }
+
+      h2 {
+        color:  rgb(157, 84, 190);
+      }
+      /* MIDDLE section */
+      .middle_section {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+        width: 80%;
+        margin: auto;
+      }
+
+      .middle_section_right {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+        border: 1px solid rgba(157, 84, 190, 0.2);
+        border-radius: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+      .middle_section_left {
+        border: 1px solid rgba(157, 84, 190, 0.2);
+        border-radius: 10px;
+        padding-left: 15px;
+        padding-right: 15px;
+        color: rgb(27, 27, 27);
+      }
+ 
+      ul li {
+        text-align: left;
+        font-size: 1.02rem;
+      }
+      
+      #skills {
+        padding-bottom: 10px;
+      }
+      #skills>text {
+        display: inline-block;
+        background-color: rgb(157, 84, 190);
+        border-radius: 3px;
+        color: white;
+        font-size: 1.15rem;
+        padding: 3px 10px;
+        margin: 5px;
+      }
+
+      /* PROJECT section */
+
+      .about_card {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(157, 84, 190, 0.2);
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        transition: 0.3s;
+        width: 45%;
+        height: 200px;
+        border-radius: 20px;
+        margin: auto;
+        padding: 5px 25px;
+      }
+      
+      .about_card:hover {
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        background-color: rgba(196, 193, 197, 0.2);
+      }
+
+      #div_icon {
+        text-align: center;
+      }
+
+      .item_icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 125px;
+        width: 70%;        
+      }
+      
+      #item_desc {
+        font-size: 1rem;
+        color: rgb(27, 27, 27);
+      }
+      a:link {
+        text-decoration: none;
+      }
+
+      #item_title {
+        color: rgb(27, 27, 27);
+      }
+ 
+      /* FOOTER section*/
+    .footer {
+      /*position: absolute;
+      bottom: 0;*/
+      width: 100%;
+      text-align: center;
+      padding-bottom: 20px;
+      background-color: transparent;
+      /*background-image: linear-gradient(to bottom right, rgb(245, 46, 32),rgb(250, 217, 70), rgb(245, 46, 32));*/
+    }
+
+    .footer_cont>text {
+      padding-left: 25px;
+      padding-right: 25px;
+      font-size: 1.2rem;  
+      color: rgb(27, 27, 27);
+    }
+
+    /*social media buttons*/
+    .fa-brands {
+      padding: 20px;
+      font-size: 25px;
+      width: 20px;
+      height: 20px;
+      text-align: center;
+      text-decoration: none;
+      margin: 2px 3px;
+      border-radius: 50%;
+    }
+    .fa:hover {
+      opacity: 0.7;
+    }
+
+    .fa-facebook {
+    background: #3B5998;
+    color: white;
+    }
+
+    .fa-linkedin {
+    background: #007bb5;
+    color: white;
+    }
+
+    /*media query*/
+    @media screen and (max-width: 700px) {
+        .footer_cont>text {
+          display: block;
+          font-size: 1rem;
+        }
+    }
+
+          /* Use a media query to add a breakpoint at 1048px changing grid display to 2 columns */
+      @media screen and (max-width: 1200px) {
+        .about_card {
+          width: 50%;
+        }
+      }
+
+      @media screen and (max-width: 1087px) {
+        .about_card {
+          width: 60%;
+        }
+        .middle_section {
+          display: grid;
+            grid-template-columns: 1fr;
+            width: 80%;;
+        }
+    
+      }
+
+      /* Use a media query to add a breakpoint at 700px changing grid display to 1 column*/
+      @media screen and (max-width: 700px) {
+        .about_card {
+          width: 60%;
+        }
+        .topHeader {
+            display: grid;
+            grid-template-columns: 1fr;
+            width: 90%;
+            margin: auto;
+          }
+          .no-display {
+            visibility: hidden;
+        }
+        .about_card {
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(157, 84, 190, 0.2);
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        transition: 0.3s;
+        width: 80%;
+        height: auto;
+        padding: 25px;
+      }
+     
+    }
+</style>
+</head>
+<body>
+  <!-- Top Bar Section -->
+  <br>
+  <br>
+  <div class="topHeader">      
+    <div>
+      <h1 id="topHeader_title" style="color: white">YEIN FLENER</h1>
+      <p style="font-size: 1.2rem">Aspiring Front End Web Developer</p>
+    </div>
+    <div>            
+      <p style="font-size: 1.1rem">I am an Administrative Specialist at the University of Arkansas Financial Aid office, pursuing a new career path in web development. With a passion for creative design, I am inspired by the prospect of using design and coding capabilities to express ideas and develop visually appealing websites with highly functional web applications. Having recently gained hands-on, practical knowledge in Front End Web Development course, I am seeking opportunities where creativity, problem-solving and web-building skills can be utilized to contribute to an organization success.</p>
+    </div>            
+  </div>
+  <!-- Content Section -->
+  <br>
+  <br>
+  <div class="middle_section">
+    <div class="middle_section_left">
+      <h2 align="center">EDUCATION</h2>
+      <ul id="education">
+        <li>Bachelor of Science in Business Administration/Minor in Information Systems, University of Arkansas, Fayetteville AR ~ Fall 2002</li>
+        <li>Graphic Arts for the Media, East Oklahoma State College, Wilburton OK ~ Fall 2015</li>
+        <li>Front End Web Development Certificate, University of Arkansas, Fayetteville AR ~ August 30, 2024</li>
+      </ul>
+    </div>
+    <div class="middle_section_right">
+      <h2>SKILLS</h2>
+      <div id="skills">
+        <text>HTML</text>
+        <text>CSS</text>
+        <text>JavaScript</text>
+        <text>CSS/JavaScript Frameworks</text>
+        <br>
+        <text>Responsive Design</text>
+        <text>Photoshop</text>
+        <text>Illustrator</text>
+        <text>InDesign</text>
+        <br>
+        <text>Bootstrap</text>
+        <text>API's</text>
+        <text>JQuery</text>
+        <text>React</text>
+      </div>
+    </div>
+  </div>
+    <!-- End of Middle Section -->
+    <!-- Project Section-->
+  <div class="project_section">
+    <h2 align="center">FINAL PROJECT</h2>    
+    <div class="about_card">   
+      <div id="div_icon">                            
+        <text id="item_icon"><i class='fas fa-bank' style='font-size:7rem; color:rgb(157, 84, 190);'></i></text>
+      </div>
+      <div class="about_bank">
+        <text id="item_title" style="color: rgb(102, 101, 101);font-size: 1.5rem; font-weight: 700">BankEZ</text><br><br>
+        <text id="item_desc" align="left">Built a responsive bank website featuring menu bar for site navigation, tools for registration and login using local and session storage, which enable users to access bank account for running basic banking transactions.</text>
+      </div> 
+    </div>                             
+  </div>
+  <br>
+  <br>
+  <center class="fun_facts">
+    <i class="fa fa-pencil" style="font-size:24px; color: rgb(145, 110, 23);"></i>
+    <text style="font-style:italic; font-family: cursive;">...... My Fun Facts - In my spare time, I enjoy playing piano or guitar and singing karaoke with my family...... </text>
+  </center>
+  <br>
+  <br>
+  <!--Footer section-->
+  <div class="footer">
+    <div class="footer_cont">
+      <text>Email: yeinflener@gmail.com</text>
+      <text class="no-display">|</text>
+      <text>Tel: (918) 471-3505</text>
+      <text class="no-display">|</text>
+      <text><a href="https://www.linkedin.com/in/yein-flener-b44782a5/">Linkedin</a></text>
+      <text class="no-display">|</text>
+      <text><a href="https://winter2024.uoadev.com/pages/yein-f/index.html">My WebDev Page</a></text>
+      <text class="no-display">|</text>
+      <text><a href="https://github.com/yeinflener">GitHub</a></text>
+    </div>
+  </div>
+</body>
+</html>
